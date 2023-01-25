@@ -1,0 +1,12 @@
+h1 {
+  font-size: 3rem;
+}
+
+ul {
+  list-style: disc;
+  margin: 2rem;
+}
+
+article {
+  border: 1px coral;
+}
