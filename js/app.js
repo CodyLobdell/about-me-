@@ -4,6 +4,8 @@ let username = prompt("Hello, who are you?");
 console.log("Hello, who are you?");
 alert("Hello " + username + " thank you, for stopping by");
 
+alert("Lets answer some quick questions! Type y for yes, or n for no!");
+
 let age = prompt("Do you think I'm younger than 35?");
 
 if (age.toUpperCase() === 'Yes' || age.toUpperCase() === 'Y') {
@@ -63,15 +65,26 @@ if (color.toUpperCase() === 'Yes' || color.toUpperCase() === 'Y') {
 
 alert("You have 3 guesses to find my number between 1-20!");
 
-let answer = 19;
-let guess = prompt("What is your guess?");
+let randomNumber = getRandomNumber(10);
+let guess;
+let guessCount = 0;
+let correctGuess = false;
 
-for (i = 0; i < 3; i++)
-  if (answer === guess) {
-    alert("You Guessed right!!");
-    break;
-  } else {
-    guess = prompt("That is incorrect. Try Again!");
-  }
+function getRandomNumber(upper) {
+  let num = Math.floor(Math.random() * upper) + 1;
+  return num;
+}
+
+do {
+  guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+  guessCount += 1;
+  if (parseInt(guess) === randomNumber) {
+    correctGuess = true;
+}
+
+} while( !correctGuess )
+alert('You guessed the number!');
+alert('It took you ' + guessCount + ' tries to guess the number ' + randomNumber + '.');
+
 
 alert("You have 6 chances to guess my favorite food!");
