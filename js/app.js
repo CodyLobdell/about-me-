@@ -60,3 +60,18 @@ if (color.toUpperCase() === 'Yes' || color.toUpperCase() === 'Y') {
   // console.log('Maybe I will wear green next week!')
   alert('Maybe I will wear green next week!')
 };
+
+alert("You have 3 guesses to find my number between 1-20!");
+
+let answer = 19;
+let guess = prompt("What is your guess?");
+
+for (i = 0; i < 3; i++)
+  if (answer === guess) {
+    alert("You Guessed right!!");
+    break;
+  } else {
+    guess = prompt("That is incorrect. Try Again!");
+  }
+
+alert("You have 6 chances to guess my favorite food!");
