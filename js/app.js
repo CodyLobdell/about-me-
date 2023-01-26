@@ -59,11 +59,10 @@ if (color.toUpperCase() === 'Yes' || color.toUpperCase() === 'Y') {
   console.log("Do I own any pets?.")
   alert("Sorry, that is wrong. I LOVE green!")
 } else {
-  // console.log('Maybe I will wear green next week!')
+  console.log('Maybe I will wear green next week!')
   alert('Maybe I will wear green next week!')
 };
 
-alert("You have 3 guesses to find my number between 1-20!");
 
 let randomNumber = getRandomNumber(10);
 let guess;
@@ -80,9 +79,9 @@ do {
   guessCount += 1;
   if (parseInt(guess) === randomNumber) {
     correctGuess = true;
-}
+  }
 
-} while( !correctGuess )
+} while (!correctGuess)
 alert('You guessed the number!');
 alert('It took you ' + guessCount + ' tries to guess the number ' + randomNumber + '.');
 
