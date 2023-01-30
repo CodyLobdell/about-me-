@@ -1,12 +1,16 @@
-h1 {
-  font-size: 3rem;
+.layout {
+  width: 1366px;
+  height: 768px;
+
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  gap: 8px;
 }
 
-ul {
-  list-style: disc;
-  margin: 2rem;
-}
-
-article {
-  border: 1px coral;
-}
+.header { grid-area: header; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
