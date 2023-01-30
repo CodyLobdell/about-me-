@@ -124,7 +124,7 @@ function numberGuess() {
 numberGuess();
 
 function foodGuess() {
-  let possibleAnswers = ['pizza', 'sushi', 'cheeseburgers', 'salads', 'cookies', 'kale'];
+  let possibleAnswers = ['pizza', 'sushi', 'cheeseburgers', 'salads', 'cookies', 'spinach'];
   let userAttempts = 6;
 
   alert(`Guess my favorite food! You only have ${userAttempts} guesses left!`);
